@@ -8,7 +8,7 @@ const MONGO_URL = `mongodb://${MONGOUSER}:${MONGOPASSWORD}@${MONGOHOST}:${MONGOP
 
 const connect = async () => {
   try {
-    await mongoose.connect(MONGO_URI);
+    await mongoose.connect(MONGO_URL);
     return console.log('DATABASE IS CONNECTED');
   } catch (err) {
     return console.log('DATABASE IS NOT CONNECTED ' + err);
